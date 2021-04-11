@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #B2F7F4;
+    background: -webkit-linear-gradient(bottom, #B2F7F4, #4367C7);
+    background: -moz-linear-gradient(bottom, #B2F7F4, #4367C7);
+    background: linear-gradient(to top, #B2F7F4, #4367C7);
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    color: #464646;
+}
+
+h1 {
+    font-family: 'Kiwi Maru', serif;
+    color: #4367C7;
+    margin: 20px 0 0;
+}
+
+h2 {
+    color: #274288;
+    font-size: 20px;
+    margin: 10px 0 0;
+}
+
+a:focus, 
+button:focus {
+    outline: #274288 dashed 2px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background: #4367C7;
+    color: white;
+    margin: 20px 0;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+}
+
+button:hover {
+    background: #274288;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: white;
+    z-index: 1;
+}
+
+#logo {
+    max-width: 80px;
+    position: relative;
+    margin: 20px 0 0 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul, 
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kiwi Maru', serif;
+    font-weight: bold;
+}
+
+nav ul li a,
+aside ul li a {
+    padding: 0 5px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #4367C7;
+}
+
+nav a:hover,
+aside a:hover {
+    color: #274288;
+    border-bottom: solid 2px #274288;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 100px auto;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.8);
+    padding-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.img-gallery, .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info {
+    align-items: flex-start;
+    max-width: 90%;
+}
+
+#feature-pic {
+    height: auto;
+    max-height: 450px;
+    max-width: 95%;
+}
+
+.thumbs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.thumbs img  {
+    max-height: 90px;
+    cursor: pointer;
+}
+
+span {
+    font-style: italic;
+}
+
+.product-info ul {
+    margin-top: 0;
+}
+
+aside {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+}
+
+footer p {
+    background: white;
+    margin: 0;
+    padding: 20px;
+}
+
+footer a {
+    color: #4367C7;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    height: 43px;
+    background-image: url('../img/footer-clouds.png');
+    background-repeat: repeat-x;
+}
+
+@media only screen and (min-width: 500px) {
+    nav ul li a {
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+
+    #logo {
+        max-width: 100px;
+        margin: 40px 0 0 20px;
+    }
+
+    article {
+        max-width: 500px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        height: 100vh;
+    }
+
+    #logo {
+        max-width: 125px;
+        margin: 50px 0 0 10px;
+    }
+
+    article {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 70%;
+        max-width: 800px;
+    }
+
+    .product-info {
+        margin: 0 40px;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    aside {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.8);
+        height: 100vh;
+        width: 150px;
+    }
+
+    aside ul {
+        padding: 100px 20px;
+        line-height: 3;
+    }
+
+    footer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
