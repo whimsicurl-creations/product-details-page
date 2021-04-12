@@ -100,7 +100,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 100px auto;
+    margin: 100px auto 50px;
 }
 
 article {
@@ -109,7 +109,6 @@ article {
     justify-content: center;
     align-items: center;
     background: rgba(255,255,255,0.8);
-    padding-top: 20px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -164,10 +163,14 @@ footer {
     margin: 0;
 }
 
-footer p {
+footer div {
     background: white;
+    padding: 20px 0 10px;
+}
+
+footer p {
     margin: 0;
-    padding: 20px;
+    line-height: 1.5;
 }
 
 footer a {
@@ -197,6 +200,38 @@ footer::before {
         max-width: 500px;
     }
 
+    footer p {
+        display: inline-block;
+    }
+
+}
+
+@media only screen and (min-width: 850px) {
+    body {
+        height: 85vh;
+    }
+
+    article {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .product-info {
+        margin: 0 40px;
+    }
+    
+    h1 {
+        margin-top: 0;
+    }
+    
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -207,21 +242,6 @@ footer::before {
     #logo {
         max-width: 125px;
         margin: 50px 0 0 10px;
-    }
-
-    article {
-        flex-direction: row;
-        align-items: flex-start;
-        width: 70%;
-        max-width: 800px;
-    }
-
-    .product-info {
-        margin: 0 40px;
-    }
-
-    h1 {
-        margin-top: 0;
     }
 
     aside {
@@ -242,8 +262,5 @@ footer::before {
 
     footer {
         position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
     }
 }
