@@ -1,27 +1,28 @@
+/* ===== GLOBAL STYLES ===== */
 * {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     background: #B2F7F4;
     background: -webkit-linear-gradient(bottom, #B2F7F4, #4367C7);
     background: -moz-linear-gradient(bottom, #B2F7F4, #4367C7);
     background: linear-gradient(to top, #B2F7F4, #4367C7);
-    margin: 0;
     font-family: 'Lexend', sans-serif;
     color: #464646;
 }
 
 h1 {
+    margin: 20px 0 0;
     font-family: 'Kiwi Maru', serif;
     color: #4367C7;
-    margin: 20px 0 0;
 }
 
 h2 {
-    color: #274288;
-    font-size: 20px;
     margin: 10px 0 0;
+    font-size: 20px;
+    color: #274288;
 }
 
 a:focus, 
@@ -34,36 +35,37 @@ img {
 }
 
 button {
-    cursor: pointer;
-    font-family: 'Lexend', sans-serif;
-    font-size: 16px;
-    background: #4367C7;
-    color: white;
     margin: 20px 0;
     padding: 15px 25px;
     border: none;
     border-radius: 25px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: white;
+    background: #4367C7;
+    cursor: pointer;
 }
 
 button:hover {
     background: #274288;
 }
 
+/* ===== HEADER ===== */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     top: 0;
     height: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background: white;
-    z-index: 1;
 }
 
 #logo {
-    max-width: 80px;
     position: relative;
+    max-width: 80px;
     margin: 20px 0 0 10px;
 }
 
@@ -74,27 +76,28 @@ nav ul {
 
 nav ul, 
 aside ul {
-    list-style: none;
     margin: 0;
     padding: 0;
     font-family: 'Kiwi Maru', serif;
     font-weight: bold;
+    list-style: none;
 }
 
 nav ul li a,
 aside ul li a {
-    padding: 0 5px;
     margin: 0 5px;
+    padding: 0 5px;
     text-decoration: none;
     color: #4367C7;
 }
 
 nav a:hover,
 aside a:hover {
-    color: #274288;
     border-bottom: solid 2px #274288;
+    color: #274288;
 }
 
+/* ===== MAIN ===== */
 main {
     display: flex;
     justify-content: center;
@@ -108,9 +111,9 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.8);
     padding: 20px;
     border-radius: 10px;
+    background: rgba(255,255,255,0.8);
 }
 
 .img-gallery, .product-info {
@@ -158,14 +161,23 @@ aside {
     display: none;
 }
 
+/* ===== FOOTER ===== */
+footer::before {
+    content: '';
+    display: block;
+    height: 43px;
+    background-image: url('../img/footer-clouds.png');
+    background-repeat: repeat-x;
+}
+
 footer {
-    text-align: center;
     margin: 0;
+    text-align: center;
 }
 
 footer div {
-    background: white;
     padding: 20px 0 10px;
+    background: white;
 }
 
 footer p {
@@ -177,18 +189,16 @@ footer a {
     color: #4367C7;
 }
 
-footer::before {
-    content: '';
-    display: block;
-    height: 43px;
-    background-image: url('../img/footer-clouds.png');
-    background-repeat: repeat-x;
+/* ===== MEDIA QUERIES ===== */
+@media only screen and (max-width: 350px) {
+    nav ul li a {
+        font-size: 14px;
+    }
 }
-
 @media only screen and (min-width: 500px) {
     nav ul li a {
-        padding: 0 10px;
         margin: 0 10px;
+        padding: 0 10px;
     }
 
     #logo {
@@ -245,14 +255,14 @@ footer::before {
     }
 
     aside {
-        display: inline-block;
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
-        background: rgba(255,255,255,0.8);
+        display: inline-block;
         height: 100vh;
         width: 150px;
+        background: rgba(255,255,255,0.8);
     }
 
     aside ul {
